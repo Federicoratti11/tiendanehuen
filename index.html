@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="scss/index.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
@@ -41,18 +42,20 @@
           </div>
       </template>
       <div>
-        <section class="filtrado">
-          <input type="text" name="buscador" id="buscador" placeholder="Buscar...">
-          <input type="number" name="precioMin" id="precioMin" placeholder="Precio mínimo">
-          <input type="number" name="precioMax" id="precioMax" placeholder="Precio máximo">
+        <section class="filtrado container-fluid">
+          <div class="row">
+          <input class="m-3 "  type="text" name="buscador" id="buscador" placeholder="Buscar...">
+          <input class="col 2"  type="number" name="precioMin" id="precioMin" placeholder="Precio mínimo">
+          <input class="col 2"  type="number" name="precioMax" id="precioMax" placeholder="Precio máximo">
           <div>
-                <label class="categoria-boton"><input type="checkbox" data-categoria="fruta">Fruta</label>
-                <label class="categoria-boton"><input type="checkbox" data-categoria="Verduras">Verduras</label>
-                <label class="categoria-boton"><input type="checkbox" data-categoria="Almacen">Almacen</label>
-                <label class="categoria-boton"><input type="checkbox" data-categoria="Cosmetica">Cosmetica</label>
+                <label class="categoria-boton m-2"><input type="checkbox" data-categoria="fruta">Fruta</label>
+                <label class="categoria-boton m-2"><input type="checkbox" data-categoria="Verduras">Verduras</label>
+                <label class="categoria-boton m-2"><input type="checkbox" data-categoria="Almacen">Almacen</label>
+                <label class="categoria-boton m-2"><input type="checkbox" data-categoria="Cosmetica">Cosmetica</label>
         </div>
+      </div>
       </section>
-          <section id="container"></section>
+          <section class="m-3" id="container"></section>
       </div>
   </main>
     <footer>
@@ -74,6 +77,7 @@
         <img src="img/google.png" alt="google" width="50px" />
       </a>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="./js/productos.js"></script>
     <script src="./js/cartservice.js"></script>

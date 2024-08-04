@@ -1,7 +1,14 @@
 /* Productos home*/
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
 
 h1{
-  padding-top: 80px;
+  padding-top: 120px;
   padding-bottom: 30px;
   text-align: center;
   align-items: center;
@@ -17,13 +24,12 @@ h1{
   display: flex;
   text-align: center;
   justify-content: center;
-  height: 50px;
+  width: 100%;
   background-color: rgb(196, 249, 213);
 
   input{
-    height: 20px;
-    margin-top: 15px;
     margin-left: 5px;
+    height: 20px;
   }
 }
 
