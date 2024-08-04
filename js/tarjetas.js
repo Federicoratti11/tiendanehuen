@@ -23,4 +23,3 @@ Productos.forEach((producto)=>{
 
     productoscontainer.append(copia)
 })
-
