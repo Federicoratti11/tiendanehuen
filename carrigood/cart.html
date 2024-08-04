@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="scss/cart.css" />
+    <script src="./js/cartService.js" defer></script>
+    <script src="./js/cart.js" defer></script>
+    <title>Nehuen organico</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="./index.html"><img src="./img/logo.png" alt="Logo" id="logo"/></a>
+        <div>
+          <a href="#">Nehuen organico</a>
+          <a href="./cart.html" id="cart"
+            ><img src="./img/carrito.png" alt="" /><span id="cuenta-carrito"
+              >0</span
+            ></a
+          >
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="carrito" id="carrito">
+        <!-- Los productos se agregarán aquí mediante JavaScript -->
+      </div>
+
+      <article class="accioncarrito">
+        <button class="vaciar-carrito" onclick="vaciarCarrito()">Vaciar Carrito</button>
+		<button class="vaciar-carrito" >Comprar</button>
+		<div id="precioTotal">Total: $0</div>
+      </article>
+    </main>
+    <footer>
+      <a
+        href="https://www.instagram.com/nehuen.organico/"
+        target="_blank"
+        class="redes"
+      >
+        <img src="img/insta.png" alt="instagram" width="50px" />
+      </a>
+      <a href="https://wa.link/dyjaxd" target="_blank" class="redes">
+        <img src="img/wpp.png" alt="wpp" width="50px" />
+      </a>
+      <a
+        href="https://www.google.com/maps/place/Nehuen+organico/@-34.6304345,-58.4305881,16.5z/data=!4m6!3m5!1s0x95bccb1fc7b980a5:0xde9af39078fdf767!8m2!3d-34.629927!4d-58.4288964!16s%2Fg%2F11h4t2d0k1?entry=ttu"
+        target="_blank"
+        class="redes"
+      >
+        <img src="img/google.png" alt="google" width="50px" />
+      </a>
+    </footer>
+  </body>
+</html>
