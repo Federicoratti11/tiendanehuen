@@ -10,7 +10,7 @@ Productos.forEach((producto)=>{
 
     copia.querySelector(`button`).addEventListener("click",() => {
         agregarAlCarrito(producto);
-
+        
         Toastify({
             text: "Producto agregado",
             duration: 500,
