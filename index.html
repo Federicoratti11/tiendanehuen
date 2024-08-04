@@ -24,28 +24,37 @@
       </nav>
     </header>
     <main>
-      <h1>
-        Descubre nuestra selección de productos orgánicos frescos y nutritivos
-      </h1>
-
-      <template>
-        <div class="tarjetaproducto">
-          <img src="" alt="">
-          <h3>Nombre</h3>
-          <h4 class="marca">marca</h4>
-          <p class="precio">$ </p>
-          <button href="" class="cta">
-            <span>Agregar al carrito</span>
-            <svg width="13px" height="10px" viewBox="0 0 13 10">
-              <path d="M1,5 L11,5"></path>
-              <polyline points="8 1 12 5 8 9"></polyline>
-            </svg>
-          </button>
-        </div>
+      <h1>Descubre nuestra selección de productos orgánicos frescos y nutritivos</h1>
+      <template id="productTemplate">
+          <div class="tarjetaproducto">
+              <img src="" alt="">
+              <h3>Nombre</h3>
+              <h4 class="marca">marca</h4>
+              <p class="precio">$ </p>
+              <button href="" class="cta">
+                  <span>Agregar al carrito</span>
+                  <svg width="13px" height="10px" viewBox="0 0 13 10">
+                      <path d="M1,5 L11,5"></path>
+                      <polyline points="8 1 12 5 8 9"></polyline>
+                  </svg>
+              </button>
+          </div>
       </template>
-
-      <section id="container"></section>
-    </main>
+      <div>
+        <section class="filtrado">
+          <input type="text" name="buscador" id="buscador" placeholder="Buscar...">
+          <input type="number" name="precioMin" id="precioMin" placeholder="Precio mínimo">
+          <input type="number" name="precioMax" id="precioMax" placeholder="Precio máximo">
+          <div>
+                <label class="categoria-boton"><input type="checkbox" data-categoria="fruta">Fruta</label>
+                <label class="categoria-boton"><input type="checkbox" data-categoria="Verduras">Verduras</label>
+                <label class="categoria-boton"><input type="checkbox" data-categoria="Almacen">Almacen</label>
+                <label class="categoria-boton"><input type="checkbox" data-categoria="Cosmetica">Cosmetica</label>
+        </div>
+      </section>
+          <section id="container"></section>
+      </div>
+  </main>
     <footer>
       <a
         href="https://www.instagram.com/nehuen.organico/"

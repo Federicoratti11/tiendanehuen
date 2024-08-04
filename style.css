@@ -1,10 +1,4 @@
-:root{
-    --color-acento: #373b37;
-    --color-acento-claro: #95ed9f33;
-    --color-texto: black;
-  }
-  
-  body{
+body{
     margin: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     display: flex;
@@ -12,6 +6,10 @@
     height: 100vh;
   }
   
+  .filtro{
+    display: none;
+}
+
   main {
     flex: 1;
 }
@@ -81,7 +79,7 @@
   
   #cuenta-carrito{
     position: absolute;
-    background-color: var(--color-acento);
+    background-color: #373b37;
     border-radius: 100%;
     display: inline-block;
     height: 25px;
