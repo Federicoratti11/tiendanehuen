@@ -21,7 +21,7 @@ function actualizarVistaCarrito() {
         const precioTotal = producto.cantidad * producto.precio;
     
         productoArticle.innerHTML = `
-            <img src="../img/productos/${producto.img}" alt="${producto.nombre}">
+            <img src="./img/productos/${producto.img}" alt="${producto.nombre}">
             <article>
             <div class="listacarrito">
                 <h4>${producto.nombre}</h4>

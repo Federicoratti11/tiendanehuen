@@ -5,7 +5,7 @@ function redirectToPage() {
 
 Productos.forEach((producto)=>{
     let copia = document.querySelector(`template`).content.cloneNode(true)
-    copia.querySelector('img').src = `../img/productos/` +producto.img;
+    copia.querySelector('img').src = `./img/productos/` +producto.img;
     copia.querySelector(`h3`).textContent = producto.nombre
     copia.querySelector(`h4`).textContent = producto.marca
     copia.querySelector(`p`).textContent += producto.precio
