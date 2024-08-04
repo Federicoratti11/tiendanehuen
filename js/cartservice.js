@@ -68,16 +68,12 @@ function calcularPrecioTotal() {
   const precioTotal = memoria.reduce((total, producto) => total + (producto.precio * producto.cantidad), 0);
   return precioTotal; // Redondear a dos decimales
 }
-
+mostrarPrecioTotal()
 function mostrarPrecioTotal() {
   const precioTotal = calcularPrecioTotal();
   const precioTotalElemento = document.getElementById('precioTotal');
   const precioFormateado = precioTotal.toLocaleString('es-ES', { style: 'currency', currency: 'ARS' });
-
   precioTotalElemento.innerText = precioFormateado;
 }
 
-
-
 actualizarNumeroCarrito();
-mostrarPrecioTotal()
