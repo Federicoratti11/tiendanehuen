@@ -1,9 +1,9 @@
-let productocontainer = document.querySelector(`#container`)
+let productoscontainer = document.querySelector(`#container`)
 
 
 Productos.forEach((producto)=>{
     let copia = document.querySelector(`template`).content.cloneNode(true)
-    copia.querySelector('img').src = `../img/productos/` +producto.img;
+    copia.querySelector('img').src = `../img/productos/` + producto.img;
     copia.querySelector(`h3`).textContent = producto.nombre
     copia.querySelector(`h4`).textContent = producto.marca
     copia.querySelector(`p`).textContent += producto.precio
@@ -21,9 +21,6 @@ Productos.forEach((producto)=>{
           }).showToast();
     })
 
-    container.append(copia)
+    productoscontainer.append(copia)
 })
 
-function redirectToPage() {
-  window.location.href = 'cart.html'; // Reemplaza 'otra_pagina.html' con la ruta a la página a la que deseas redirigir
-}
