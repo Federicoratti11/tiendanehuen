@@ -1,0 +1,72 @@
+main{
+  margin-top: 80px;
+}
+
+.carrito {
+  display: flex;
+  flex-direction: column;
+}
+.producto {
+  display: flex;
+  margin-left: 25%;
+  padding: 5px;
+  
+}
+.producto img {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+.producto article {
+  display: flex;
+  align-items: center;
+}
+.producto article h4 {
+  margin: 0;
+  margin-right: 10px;
+}
+.botones {
+  margin: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #7fa583;
+  border-radius: 3px;
+
+
+}
+.botones button {
+  font-size: 30px;
+  height: 30px;
+  width: 30px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+.botones button:hover {
+  color: black;
+}
+
+.accioncarrito {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px; /* Ajusta la altura según tus necesidades */
+}
+
+.vaciar-carrito {
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  background-color: #263427;
+  color: white;
+  cursor: pointer;
+  border-radius: 3px;
+
+}
+
+.vaciar-carrito:hover {
+  background-color: #161e16;
+  color: white;
+}
