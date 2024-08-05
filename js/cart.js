@@ -11,6 +11,7 @@ function obtenerMemoriaCarrito() {
 function actualizarVistaCarrito() {
     const carritoDiv = document.getElementById('carrito');
     const memoria = obtenerMemoriaCarrito();
+    mostrarPrecioTotal()
 
     carritoDiv.innerHTML = ''; // Limpiar la vista actual
 
@@ -66,6 +67,64 @@ function vaciarCarrito() {
     actualizarNumeroCarrito();
     mostrarPrecioTotal()
 }
+const precioTotalModalElemento = document.getElementById('precioTotalModal');
+mostrarPrecioTotal()
+function mostrarPrecioTotal() {
+  const precioTotal = calcularPrecioTotal();
+  const precioTotalElemento = document.getElementById('precioTotal');
+  const precioFormateado = precioTotal.toLocaleString('es-ES', { style: 'currency', currency: 'ARS' });
+  precioTotalElemento.innerText = `Total: ${precioFormateado}`;
+  precioTotalModalElemento.innerText = `Total: ${precioFormateado}`;
+}
 
+
+
+openModalBtn.addEventListener('click', () => {
+    mostrarPrecioTotal(); // Asegúrate de mostrar el precio total antes de abrir el modal
+    modal.style.display = 'block'; // Muestra el modal
+});
 // Inicializar la vista del carrito al cargar la página
 document.addEventListener('DOMContentLoaded', actualizarVistaCarrito);
+
+
+
+document.getElementById("openModalBtn").addEventListener("click", function() {
+    document.getElementById("modal").style.display = "block";
+});
+
+window.addEventListener("click", function(event) {
+    if (event.target === document.getElementById("modal")) {
+        document.getElementById("modal").style.display = "none";
+    }
+});
+
+
+const boton = document.getElementById('rrtt');
+const formulario = document.getElementById('formularioCompra');
+const modal = document.getElementById('modal');
+
+boton.addEventListener('click', function(event) {
+    // Prevenir el comportamiento predeterminado del botón
+    event.preventDefault();
+
+    // Verificar si el formulario está completo y es válido
+    if (formulario.checkValidity()) {
+        // Mostrar la alerta de SweetAlert2
+        Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Su compra se realizo con exito",
+            showConfirmButton: true,
+        }).then((result) => {
+            if (result.isConfirmed || result.dismiss === Swal.DismissReason.timer) {
+                // Vaciar el carrito
+                vaciarCarrito();
+                // Cerrar el modal
+                modal.style.display = 'none';
+            }
+        });
+    } else {
+        // Si el formulario no es válido, mostrar los mensajes de error
+        formulario.reportValidity();
+    }
+});

@@ -42,7 +42,7 @@ h1{
   justify-content: center;}
   
   .tarjetaproducto{
-    background-color: var(--color-acento-claro);
+    background-color: #ccefce;
     text-align: center;
     padding: 10px;
     max-width: 400px;
