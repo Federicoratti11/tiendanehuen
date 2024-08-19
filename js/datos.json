@@ -1,0 +1,102 @@
+
+[
+  {
+    "Nombre": "Bolson de fruta",
+    "Categoría": "fruta",
+    "Precio": 3870,
+    "Imagen": "combofrut.png",
+    "Cantidad": 0
+  },
+  {
+    "Nombre": "Atado de Espinaca",
+    "Categoría": "Verduras",
+    "Precio": 1680,
+    "Imagen": "espinaca.png",
+    "Cantidad": 0
+
+  },
+  {
+    "Nombre": "Semillas de lino 250gr",
+    "Categoría": "Almacen",
+    "Precio": 565,
+    "Imagen": "semillalino.png",
+    "Cantidad": 0
+  },
+  {
+    "Nombre": "Soja texturizada 1/2kg",
+    "Categoría": "Almacen",
+    "Precio": 1420,
+    "Imagen": "sojatexturizada.png",
+    "Cantidad": 0
+  },
+  {
+    "Nombre": "Nueces pecan 250grs",
+    "Categoría": "Almacen",
+    "Precio": 3120,
+    "Imagen": "pecan.png",
+    "Cantidad": 0
+  },
+  {
+    "Nombre": "Pasta de Aceitunas",
+    "Categoría": "Almacen",
+    "Precio": 3240,
+    "Imagen": "pastaaceituna.jpeg",
+    "Cantidad": 0
+  },
+  {
+    "Nombre": "Pure de Tomate",
+    "Categoría": "Almacen",
+    "Precio": 4830,
+    "Imagen": "puretomate.jpg",
+    "Cantidad": 0
+  },
+  {
+    "Nombre": "Te en hebras 50G",
+    "Categoría": "Almacen",
+    "Precio": 3150,
+    "Imagen": "tes.jpg",
+    "Cantidad": 0
+  },
+  {
+    "Nombre": "Cepillo de dientes",
+    "Categoría": "Cosmetica",
+    "Precio": 3000,
+    "Imagen": "cepillo.png",
+    "Cantidad": 0
+  },
+  {
+    "Nombre": "Acondicionador",
+    "Categoría": "Cosmetica",
+    "Precio": 6400,
+    "Imagen": "acondicionador.png",
+    "Cantidad": 0
+  },
+  {
+    "Nombre": "Mani sin sal 1/2 kg",
+    "Categoría": "Almacen",
+    "Precio": 3250,
+    "Imagen": "manii.jpeg",
+    "Cantidad": 0
+  },
+  {
+    "Nombre": "Yerba Roapipo 500grs",
+    "Categoría": "Almacen",
+    "Precio": 4870,
+    "Imagen": "roapipo.jpeg",
+    "Cantidad": 0
+  },
+  {
+    "Nombre": "Banana Formosa 1kg",
+    "Categoría": "fruta",
+    "Precio": 1870,
+    "Imagen": "bananas.png",
+    "Cantidad": 0
+  },
+  {
+    "Nombre": "Pera Packham 1kg",
+    "Categoría": "fruta",
+    "Precio": 1650,
+    "Imagen": "peras.png",
+    "Cantidad": 0
+  }
+]
