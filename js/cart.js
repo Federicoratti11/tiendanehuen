@@ -1,17 +1,29 @@
 const precioTotalElemento = document.getElementById("precioTotal");
+const precioTotalModalElemento = document.getElementById('precioTotalModal');
+const openModalBtn = document.getElementById("openModalBtn");
+const modal = document.getElementById("modal");
 
-
-
- // Función para obtener la memoria del carrito
+// Función para obtener la memoria del carrito
 function obtenerMemoriaCarrito() {
     return JSON.parse(localStorage.getItem('articulos')) || [];
+}
+
+// Función para guardar la memoria del carrito
+function guardarMemoriaCarrito(carrito) {
+    localStorage.setItem('articulos', JSON.stringify(carrito));
+}
+
+// Función para calcular el precio total
+function calcularPrecioTotal() {
+    const memoria = obtenerMemoriaCarrito();
+    return memoria.reduce((total, producto) => total + (producto.cantidad * producto.Precio), 0);
 }
 
 // Función para actualizar la vista del carrito
 function actualizarVistaCarrito() {
     const carritoDiv = document.getElementById('carrito');
     const memoria = obtenerMemoriaCarrito();
-    mostrarPrecioTotal()
+    
 
     carritoDiv.innerHTML = ''; // Limpiar la vista actual
 
@@ -19,14 +31,14 @@ function actualizarVistaCarrito() {
         const productoArticle = document.createElement('article');
         productoArticle.className = 'producto';
     
-        const precioTotal = producto.cantidad * producto.precio;
+        const precioTotal = producto.cantidad * producto.Precio;
     
         productoArticle.innerHTML = `
-            <img src="./img/productos/${producto.img}" alt="${producto.nombre}">
+            <img src="./img/productos/${producto.Imagen}" alt="${producto.Nombre}">
             <article>
             <div class="listacarrito">
-                <h4>${producto.nombre}</h4>
-                <p>Total por unidad = $${producto.precio}
+                <h4>${producto.Nombre}</h4>
+                <p>Precio por unidad = $${producto.Precio}</p>
                 <p>Total por producto = $${precioTotal}</p>
             </div>
                 
@@ -39,25 +51,26 @@ function actualizarVistaCarrito() {
         `;
     
         carritoDiv.appendChild(productoArticle);
+
+        mostrarPrecioTotal();
     });
 }
 
+// Función para ajustar la cantidad de un producto en el carrito
 function ajustarCantidad(id, cambio) {
-  const memoria = obtenerMemoriaCarrito();
-  const indiceProducto = memoria.findIndex(articulo => articulo.id === id);
+    const memoria = obtenerMemoriaCarrito();
+    const indiceProducto = memoria.findIndex(articulo => articulo.id === id);
 
-  if (indiceProducto === -1) return;
+    if (indiceProducto === -1) return;
 
-  memoria[indiceProducto].cantidad += cambio;
+    memoria[indiceProducto].cantidad += cambio;
 
-  if (memoria[indiceProducto].cantidad <= 0) {
-      memoria.splice(indiceProducto, 1);
-  }
+    if (memoria[indiceProducto].cantidad <= 0) {
+        memoria.splice(indiceProducto, 1);
+    }
 
-  guardarMemoriaCarrito(memoria);
-  actualizarNumeroCarrito();
-  actualizarVistaCarrito();
-  mostrarPrecioTotal()
+    guardarMemoriaCarrito(memoria);
+    actualizarVistaCarrito();
 }
 
 // Función para vaciar el carrito
@@ -65,43 +78,36 @@ function vaciarCarrito() {
     localStorage.removeItem('articulos');
     actualizarVistaCarrito();
     actualizarNumeroCarrito();
-    mostrarPrecioTotal()
+    mostrarPrecioTotal();
 }
-const precioTotalModalElemento = document.getElementById('precioTotalModal');
-mostrarPrecioTotal()
+
+// Función para mostrar el precio total
 function mostrarPrecioTotal() {
-  const precioTotal = calcularPrecioTotal();
-  const precioTotalElemento = document.getElementById('precioTotal');
-  const precioFormateado = precioTotal.toLocaleString('es-ES', { style: 'currency', currency: 'ARS' });
-  precioTotalElemento.innerText = `Total: ${precioFormateado}`;
-  precioTotalModalElemento.innerText = `Total: ${precioFormateado}`;
+    const precioTotal = calcularPrecioTotal();
+    const precioFormateado = precioTotal.toLocaleString('es-ES', { style: 'currency', currency: 'ARS' });
+    document.getElementById('precioTotal').innerText = `Total: ${precioFormateado}`;
+    document.getElementById('precioTotalModal').innerText = `Total: ${precioFormateado}`;
 }
 
-
-
+// Mostrar el precio total al abrir el modal
 openModalBtn.addEventListener('click', () => {
     mostrarPrecioTotal(); // Asegúrate de mostrar el precio total antes de abrir el modal
     modal.style.display = 'block'; // Muestra el modal
 });
+
 // Inicializar la vista del carrito al cargar la página
 document.addEventListener('DOMContentLoaded', actualizarVistaCarrito);
 
-
-
-document.getElementById("openModalBtn").addEventListener("click", function() {
-    document.getElementById("modal").style.display = "block";
-});
-
+// Cerrar el modal al hacer clic fuera del contenido
 window.addEventListener("click", function(event) {
-    if (event.target === document.getElementById("modal")) {
-        document.getElementById("modal").style.display = "none";
+    if (event.target === modal) {
+        modal.style.display = "none";
     }
 });
 
-
+// Procesar el formulario y vaciar el carrito al confirmar la compra
 const boton = document.getElementById('rrtt');
 const formulario = document.getElementById('formularioCompra');
-const modal = document.getElementById('modal');
 
 boton.addEventListener('click', function(event) {
     // Prevenir el comportamiento predeterminado del botón
@@ -113,7 +119,7 @@ boton.addEventListener('click', function(event) {
         Swal.fire({
             position: "center",
             icon: "success",
-            title: "Su compra se realizo con exito",
+            title: "Su compra se realizó con éxito",
             showConfirmButton: true,
         }).then((result) => {
             if (result.isConfirmed || result.dismiss === Swal.DismissReason.timer) {

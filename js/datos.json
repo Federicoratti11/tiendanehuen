@@ -1,6 +1,6 @@
-
 [
   {
+    "id": 1,
     "Nombre": "Bolson de fruta",
     "Categoría": "fruta",
     "Precio": 3870,
@@ -8,14 +8,15 @@
     "Cantidad": 0
   },
   {
+    "id": 2,
     "Nombre": "Atado de Espinaca",
     "Categoría": "Verduras",
     "Precio": 1680,
     "Imagen": "espinaca.png",
     "Cantidad": 0
-
   },
   {
+    "id": 3,
     "Nombre": "Semillas de lino 250gr",
     "Categoría": "Almacen",
     "Precio": 565,
@@ -23,6 +24,7 @@
     "Cantidad": 0
   },
   {
+    "id": 4,
     "Nombre": "Soja texturizada 1/2kg",
     "Categoría": "Almacen",
     "Precio": 1420,
@@ -30,6 +32,7 @@
     "Cantidad": 0
   },
   {
+    "id": 5,
     "Nombre": "Nueces pecan 250grs",
     "Categoría": "Almacen",
     "Precio": 3120,
@@ -37,6 +40,7 @@
     "Cantidad": 0
   },
   {
+    "id": 6,
     "Nombre": "Pasta de Aceitunas",
     "Categoría": "Almacen",
     "Precio": 3240,
@@ -44,6 +48,7 @@
     "Cantidad": 0
   },
   {
+    "id": 7,
     "Nombre": "Pure de Tomate",
     "Categoría": "Almacen",
     "Precio": 4830,
@@ -51,6 +56,7 @@
     "Cantidad": 0
   },
   {
+    "id": 8,
     "Nombre": "Te en hebras 50G",
     "Categoría": "Almacen",
     "Precio": 3150,
@@ -58,6 +64,7 @@
     "Cantidad": 0
   },
   {
+    "id": 9,
     "Nombre": "Cepillo de dientes",
     "Categoría": "Cosmetica",
     "Precio": 3000,
@@ -65,6 +72,7 @@
     "Cantidad": 0
   },
   {
+    "id": 10,
     "Nombre": "Acondicionador",
     "Categoría": "Cosmetica",
     "Precio": 6400,
@@ -72,6 +80,7 @@
     "Cantidad": 0
   },
   {
+    "id": 11,
     "Nombre": "Mani sin sal 1/2 kg",
     "Categoría": "Almacen",
     "Precio": 3250,
@@ -79,6 +88,7 @@
     "Cantidad": 0
   },
   {
+    "id": 12,
     "Nombre": "Yerba Roapipo 500grs",
     "Categoría": "Almacen",
     "Precio": 4870,
@@ -86,6 +96,7 @@
     "Cantidad": 0
   },
   {
+    "id": 13,
     "Nombre": "Banana Formosa 1kg",
     "Categoría": "fruta",
     "Precio": 1870,
@@ -93,6 +104,7 @@
     "Cantidad": 0
   },
   {
+    "id": 14,
     "Nombre": "Pera Packham 1kg",
     "Categoría": "fruta",
     "Precio": 1650,

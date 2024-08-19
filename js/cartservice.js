@@ -65,9 +65,17 @@ function reiniciarCarrito() {
 /** sumar productos del carrito */
 function calcularPrecioTotal() {
   const memoria = obtenerMemoriaCarrito();
-  const precioTotal = memoria.reduce((total, producto) => total + (producto.precio * producto.cantidad), 0);
-  return precioTotal; // Redondear a dos decimales
+  return memoria.reduce((total, producto) => {
+      // Asegúrate de que los atributos necesarios están presentes
+      if (producto.id && producto.Precio && producto.cantidad) {
+          return total + (producto.cantidad * producto.Precio);
+      } else {
+          console.error(`Producto con ID ${producto.id} tiene atributos inválidos.`);
+          return total;
+      }
+  }, 0);
 }
+
 
 
 actualizarNumeroCarrito();
