@@ -13,20 +13,19 @@ function guardarMemoriaCarrito(memoria) {
 /** Toma un objeto producto o un objeto con al menos un ID y lo agrega al carrito */
 function agregarAlCarrito(producto) {
   const memoria = obtenerMemoriaCarrito();
-  const indiceProducto = memoria.findIndex(articulo => articulo.id === producto.id);
-  let cantidadProductoFinal;
+  const productoExistente = memoria.find(p => p.id === producto.id);
 
-  if (indiceProducto === -1) {
-    memoria.push({ ...producto, cantidad: 1 });
-    cantidadProductoFinal = 1;
-  } else {
-    memoria[indiceProducto].cantidad++;
-    cantidadProductoFinal = memoria[indiceProducto].cantidad;
-  }
+  if (productoExistente) {
+    // Si el producto ya existe, aumenta la cantidad
+    productoExistente.cantidad ++;
+} else {
+
+  producto.cantidad = 1; // Asegúrate de establecer la cantidad inicial en 1
+  memoria.push(producto);
+}
 
   guardarMemoriaCarrito(memoria);
   actualizarNumeroCarrito();
-  return cantidadProductoFinal;
 }
 
 /** Resta una unidad de un producto del carrito */
